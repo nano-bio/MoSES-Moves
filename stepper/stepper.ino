@@ -184,11 +184,16 @@ void loop() {
       Serial.print("Configured measurement time per point:");
       Serial.print("\t");
       Serial.print(interval, DEC);
-      Serial.println(" ms");
+      Serial.print(" ms");
+      Serial.print("\t");
+      Serial.print("equals");
+      Serial.print("\t");
+      Serial.print(interval/1000.0/60.0, 2);
+      Serial.println(" min");
   
       Serial.print("Total measurement time:");
       Serial.print("\t");
-      Serial.print(total_time_min, DEC);
+      Serial.print(total_time_min, 2);
       Serial.println(" min");
       Serial.println("-----------------------------------------------");
       
