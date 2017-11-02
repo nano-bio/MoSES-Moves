@@ -163,8 +163,14 @@ void loop() {
         if (parameter == "interval") {
           interval = value.toInt();
           Serial.print("Interval set to: ");
-          Serial.println(value);
+          Serial.print(value);
+          Serial.print(" ms");
           total_time_min = interval * mpoints / 1000 / 60;
+          Serial.print("\t");
+          Serial.print("equals");
+          Serial.print("\t");
+          Serial.print(interval/1000.0/60.0, 2);
+          Serial.println(" min");
         }
       }
   }
